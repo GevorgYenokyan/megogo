@@ -139,3 +139,14 @@
     color: #f60;
   
 }
+
+
+@media(max-width:1150px){
+    .video_text{
+        display: none;
+    }
+    
+    .title_text{
+        display: none;
+    }
+    }

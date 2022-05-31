@@ -357,6 +357,16 @@ ion-icon {
 
  @media(max-width:1150px){
 
+    .contenier{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .all_cont{
+        width: 100%;
+    }
+
     .nav_list{
         display: none;
     }

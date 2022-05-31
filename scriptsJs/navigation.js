@@ -48,7 +48,9 @@ dropdown.onmouseover = function () {
 };
 
 function controlWidth() {
-  all_cont.style.width = `${offsetWidth - 380}px`;
+  if (offsetWidth > 1150) {
+    all_cont.style.width = `${offsetWidth - 380}px`;
+  }
 }
 
 window.addEventListener("resize", controlWidth);

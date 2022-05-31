@@ -65,3 +65,10 @@
     height: 30px;
     cursor: pointer;
 }
+
+
+@media(max-width:1150px){
+    .footer_div{
+        display: none;
+    }
+    }

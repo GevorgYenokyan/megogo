@@ -44,10 +44,12 @@ var accordion_container = document.querySelector(".acoridion_channels");
 var program = document.querySelector(".program");
 
 program.addEventListener("click", function () {
-  size_bull = !size_bull;
-  console.log(size_bull);
-  accordion_size();
-  playerAddClass();
+  if (offsetWidth > 1150) {
+    size_bull = !size_bull;
+    console.log(size_bull);
+    accordion_size();
+    playerAddClass();
+  }
 });
 
 function accordion_size() {
@@ -58,10 +60,20 @@ function accordion_size() {
   }
 }
 
+function mediaProgramlist() {
+  if (offsetWidth < 1150) {
+    accordion_container.style.transform = `translateX(0px)`;
+  }
+}
+
+window.addEventListener("load", mediaProgramlist);
+
 function change_bull() {
-  size_bull = false;
-  accordion_size();
-  playerAddClass();
+  if (offsetWidth > 1150) {
+    size_bull = false;
+    accordion_size();
+    playerAddClass();
+  }
 }
 
 dataProgramList.map((el, i) => {
