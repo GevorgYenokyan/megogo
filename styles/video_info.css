@@ -1,0 +1,110 @@
+.acordon_video{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.acordion_video_head{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 25px;
+    align-items: center;
+
+}
+
+.video_info_content{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.acordion_title_text{
+    display: flex;
+    flex-direction: column;
+}
+
+.title_head{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.title_text{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 700;
+    font-size: 15px; 
+    align-items: center;
+    cursor: pointer;
+}
+
+.title_text:hover{
+    color: #f60;
+}
+
+.video_info_img{
+    width: 50px;
+}
+
+.info_links{
+    margin-right: 20px;
+}
+
+.iconify_info_facebook{
+    width: 50px;
+    background-color: rgb(54, 53, 53);
+    padding: 10px 30px;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 0.5px solid rgb(161, 161, 161);
+  
+}
+
+.iconify_info_twitter{
+    width: 50px;
+    background-color: rgb(54, 53, 53);
+    padding: 10px 26px;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 0.5px solid rgb(161, 160, 160);
+  
+}
+
+
+.iconify_info_facebook:hover{
+    background-color: rgb(30, 30, 194);
+}
+
+.iconify_info_twitter:hover{
+    background-color: rgb(63, 135, 194);
+}
+.video-description{
+    color: white;
+    margin: 15px;
+    width: 95%;
+    display: none;
+    height: 100px;
+    transition: 0.5s;
+}
+
+
+
+.chevron-back{
+    transform: rotate(270deg);
+    transition: 0.5s;
+}
+
+#iconify_facebook{
+    font-size: 15px;
+    
+}
+
+#iconify_twitter{
+    font-size: 15px;
+}

@@ -1,0 +1,67 @@
+.footer{
+    display: flex;
+    width: 100%;
+    background-color: antiquewhite;
+    justify-content: space-around;
+}
+
+.footer_div{
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+}
+
+.users_and_partners{
+    display: flex;
+    flex-direction: column;
+}
+
+#users_and_title{
+    padding-top: 30px;
+}
+
+.title{
+    margin: 12px  0px;
+    color: #666;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.about_partners{
+    list-style: none;
+}
+
+.about_partners_iteam{
+    margin: 10px auto;
+}
+
+.link-gray{
+ color:#a6a6a6;
+ text-decoration: none;
+}
+
+.links_flex{
+    display: flex;
+    flex-direction: column;
+}
+.links_container{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 40px;
+}
+.link-gray_megog_net{
+    color:#a6a6a6;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.link-gray:hover{
+    color: #f60;
+}
+
+.img_link{
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+}

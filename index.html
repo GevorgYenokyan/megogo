@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="styles/navigation.css">
+        <link rel="stylesheet" type="text/css" href="styles/right_menu.css">
+        <link rel="stylesheet" type="text/css" href="styles/player.css">
+        <link rel="stylesheet" type="text/css" href="styles/modal.css">
+        <link rel="stylesheet" type="text/css" href="styles/video_info.css">
+        <link rel="stylesheet" type="text/css" href="styles/footer.css">
+
+       
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div class="contenier"> 
+          <div class="all_cont">  
+            <div class="navigation">
+                <div class="nav_logo">
+                <img src="./img/r0x0x4.webp" alt="logo"/>
+                
+                </div>
+
+                <ul class="nav_list">
+                    <li class="list_menu">
+                        <a class="nav_iteam" href="#">Телеканалы</a>
+                    </li>
+                    <li class="list_menu">
+                        <a class="nav_iteam" id="film" href="#">Фильмы</a>				
+                    </li>
+                    <li class="list_menu" id="mult">
+                        <a class="nav_iteam"  href="#">Мультфильмы</a>
+                    </li>
+                    <li class="list_menu">
+                        <a class="nav_iteam" id="serial" href="#">Сериалы</a>
+                    </li>
+                    <li class="list_menu">
+                        <a class="nav_iteam" id="show" href="#">Шоу</a>
+                    </li>
+                    <li class="list_menu">
+                        <div class="dropdown">
+                            <button class="dropbtn"> 
+                                <div class="circle_div">
+                                   <span class="circle"></span>
+                                   <span class="circle"></span>
+                                   <span class="circle"></span>
+                                </div>
+                            </button>
+                            <div class="dropdown-content">
+                              <a href="#" id="film_drop" >Фильмы</a>
+                              <a href="#" id="mult_drop">Мультфильмы</a>
+                              <a href="#" id="serial_drop">Сериалы</a>
+                              <a href="#" id="show_drop">Шоу</a>
+                              <a href="#">Блогеры</a>
+                              <a href="#">Ввести промокод</a>
+                              <a href="#">Аудиокниги и подкасты</a>
+                              <a href="#">Привязать телевизор</a>
+                              <a href="#">Все о подписках</a>
+                              <a href="#">MEGOGO на устройствах</a>
+                              <a href="#">Кино по подписке</a>
+                              <a href="#">Трейлеры</a>
+                              <a href="#">Discovery+</a>
+                              <a href="#">Смотри как слышно</a>
+                              <a href="#">Подборки</a>
+                            </div>
+                          </div>
+                        
+                    </li>
+
+                </ul>
+            <div class="search_block">
+            
+
+              <div class="search_block_div">
+                  <a class="search_block_iteam_try" href="#">
+                      Попробовать за 19 драм
+                  </a>
+                  <div class="search_block_input">
+                 <ion-icon class="search" name="search"></ion-icon>
+                <input class="search_input" type="text">
+                <a href="#" class="filter">фильтры</a>
+            </div>               
+        </div>
+        
+
+                </div>
+            <div class="dropdown">
+                <button  class="dropbtn_language"> RU </button>
+                <div class="dropdown_content_language">
+                  <a href="#"><img class="dropdown-content_flag" src="./img/ukrflag.png" alt="ukrflag"/> украинский</a>
+                  <a href="#"><img class="dropdown-content_flag" src="./img/engflag.png" alt="engflag"/>english</a>
+                  <a href="#"><img class="dropdown-content_flag" src="./img/armflag.png" alt="armflag"/>հայերեն</a>              
+                </div>
+                <a id="sine_in" class="search_block_iteam" href="#">Войти</a>
+            </div>
+            </div>
+            <div class="player_container">
+                <video class="player" autoplay playsinline controls id="video" controls></video> 
+                <div class="video_text">
+                <svg class="svgicon-svod-tv" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 140 80">
+                    <g>
+                        <path class="st0" d="M94,74H46c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h48c0.6,0,1-0.4,1-1C95,74.4,94.6,74,94,74z"></path>
+                        <path class="st0" d="M80.3,34.1L64.5,25c-0.3-0.2-0.7-0.2-1,0c-0.3,0.2-0.5,0.5-0.5,0.9v18.2c0,0.4,0.2,0.7,0.5,0.9
+                    c0.2,0.1,0.3,0.1,0.5,0.1c0.2,0,0.3,0,0.5-0.1l15.8-9.1c0.3-0.2,0.5-0.5,0.5-0.9C80.8,34.6,80.6,34.3,80.3,34.1z M65,42.4V27.6
+                    L77.8,35L65,42.4z"></path>
+                        <path class="st0" d="M137,20h-7V3c0-1.7-1.3-3-3-3H13c-1.7,0-3,1.3-3,3v30H3c-1.7,0-3,1.3-3,3v41c0,1.7,1.3,3,3,3h23
+                    c1.7,0,3-1.3,3-3v-7h88v7c0,1.7,1.3,3,3,3h17c1.7,0,3-1.3,3-3V23C140,21.3,138.7,20,137,20z M10,35h12v13H7V35H10z M2,57h3v6H2V57z
+                     M2,50h3v5H2V50z M5,48H2v-5h3V48z M2,65h3v5H2V65z M7,50h15v13H7V50z M27,48h-3v-5h3V48z M27,55h-3v-5h3V55z M24,57h3v6h-3V57z
+                     M27,41h-3v-6h2c0.6,0,1,0.4,1,1V41z M2,36c0-0.6,0.4-1,1-1h2v6H2V36z M3,78c-0.6,0-1-0.4-1-1v-5h3v6H3z M7,78V65h15v13H7z M27,77
+                    c0,0.6-0.4,1-1,1h-2v-6h3V77z M24,70v-5h3v5H24z M29,68V36c0-1.7-1.3-3-3-3H12V3c0-0.6,0.4-1,1-1h114c0.6,0,1,0.4,1,1v17h-8
+                    c-1.7,0-3,1.3-3,3v45H29z M138,77c0,0.6-0.4,1-1,1h-17c-0.6,0-1-0.4-1-1v-7V23c0-0.6,0.4-1,1-1h10h7c0.6,0,1,0.4,1,1V77z"></path>
+                        <path class="st0" d="M125.5,31c0.8,0,1.5-0.7,1.5-1.5c0-0.8-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5C124,30.3,124.7,31,125.5,31z"></path>
+                        <path class="st0" d="M131.5,31c0.8,0,1.5-0.7,1.5-1.5c0-0.8-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5C130,30.3,130.7,31,131.5,31z"></path>
+                        <path class="st0" d="M125.5,37c0.8,0,1.5-0.7,1.5-1.5s-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5S124.7,37,125.5,37z"></path>
+                        <path class="st0" d="M131.5,37c0.8,0,1.5-0.7,1.5-1.5s-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5S130.7,37,131.5,37z"></path>
+                        <path class="st0" d="M125.5,40c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5S126.3,40,125.5,40z"></path>
+                        <path class="st0" d="M133,41.5c0-0.8-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5S133,42.3,133,41.5z"></path>
+                        <path class="st0" d="M128.5,51c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5c0.8,0,1.5-0.7,1.5-1.5S129.3,51,128.5,51z"></path>
+                        <path class="st0" d="M128.5,59c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5c0.8,0,1.5-0.7,1.5-1.5S129.3,59,128.5,59z"></path>
+                        <path class="st0" d="M132.5,55c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5c0.8,0,1.5-0.7,1.5-1.5S133.3,55,132.5,55z"></path>
+                        <path class="st0" d="M124.5,55c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5c0.8,0,1.5-0.7,1.5-1.5S125.3,55,124.5,55z"></path>
+                    </g>
+                </svg> 
+                  
+                       <a  class="video_text_link" href="#"> Этот канал доступен по подписке «ТВ и Кино»
+                       </br>Популярные и развлекательные каналы. Тысячи фильмов и
+                         мультиков, зарубежные сериалы, постоянные скидки + аудиокниги в 
+                         мобильном приложении.</a>
+
+                         <button class="try_video_btn">Попробовать за 19 драм</button>
+                         <div class="tariff-info tariff-info-main">      
+                  <span class="subscriptions-try-and-buy-text">
+                    <span class="subscriptions-discount-label">
+                        АКЦИЯ
+                    </span>
+                                 Первый месяц за 19  драм, далее — 1 500 драм/мес.
+                </span>           
+                
+            </div>     
+            <a class="about-promo" href="https://megogo.net/ru/kino_i_tv">Про акцию</a>
+            <div class="arrow_div">
+                <span class="iconify" data-icon="fluent:next-28-filled" style="color: 
+                #858383;" data-rotate="180deg"  data-width="25"></span>
+                <span id="prev"  class="iconify" data-icon="bxs:right-arrow" 
+                data-rotate="180deg"  data-width="25"></span>
+                <span class="iconify" data-icon="bxs:right-arrow" style="color: #858383;" data-width="28" 
+                data-height="28"></span>
+                <span id="next" class="iconify" data-icon="bxs:right-arrow" 
+                data-width="25" data-height="25"></span>
+                <span class="iconify" data-icon="fluent:next-28-filled" style="color: #858383;" 
+                 data-width="25"></span>
+            </div>
+          </div>
+        </div>
+        <div class="acordon_video">
+            <div class="acordion_video_head">
+                <div class="video_info_content">
+                 <img class="video_info_img"  src="./img/chanel.jpg" src = "channel" />
+                 <div class="acordion_title_text">
+                   <a class="title_head" href="#"> Kvartal tv</a>
+                   <a class="title_text" > развлакательные , Украина  <ion-icon class="chevron-back"
+                      name="chevron-back-outline"></ion-icon> </a>
+                 </div>
+              </div>
+              <div class="info_links">
+             <span class="iconify_info_facebook">  <span id="iconify_facebook" class="iconify" data-icon="fa:facebook" style="color: white;"></span></span> 
+             <span class="iconify_info_twitter">  <span id="iconify_twitter" class="iconify" data-icon="ant-design:twitter-outlined" style="color: white;"></span></span>
+              </div>
+            </div>
+            <p class="video-description" >
+              Культовые мировые киноленты, номинанты и лауреаты известных премий, большое разнообразие жанров и, конечно, 
+              тысячи эмоций. Лучший телеканал зарубежного кино* в России приглашает окунуться в мир тревог и
+               волнений, печали и радости, любви и ненависти, слез и смеха со знаменитыми актёрами последних двух 
+               десятилетий. Выбирайте кино на свой вкус и наслаждайтесь просмотром!
+            </p>
+        </div>
+        <div class="footer_div">
+         <div class="footer">
+          
+              <div class="users_and_partners">
+                  <p class="title">
+                      
+                          Пользователям и партнёрам
+                      
+                  </p>
+
+                  <ul class="about_partners">
+                      
+                          <li class="about_partners_iteam" >
+                              <a class="link-gray" href="https://megogo.net/ru/kino_i_tv">
+                                  Все о подписках
+                              </a>
+                          </li>
+                      
+                          <li class="about_partners_iteam">
+                              <a class="link-gray" href="https://megogo.net/ru/code">
+                                 Активировать промокод
+                              </a>
+                          </li>
+                      
+                          <li class="about_partners_iteam">
+                              <a class="link-gray" href="https://megogo.net/ru/rules">
+                                  Соглашение
+                              </a>
+                          </li>
+                      
+                          <li class="about_partners_iteam">
+                              <a class="link-gray" href="https://megogo.net/ru/rules#agreement-privacy">
+                                  Политика обработки ПД
+                              </a>
+                          </li>
+                      
+                          <li class="about_partners_iteam">
+                              <a class="link-gray" href="https://megogo.net/ru/deleting_profile">
+                                  Удалить профиль
+                              </a>
+                          </li>
+                      
+                          <li class="about_partners_iteam">
+                              <a class="link-gray" href="https://megogo.net/ru/about">
+                                  О нас
+                              </a>
+                          </li>
+                      
+                          <li class="about_partners_iteam">
+                              <a class="link-gray" href="https://megogo.net/ru/press_kit">
+                                  Контакты для СМИ
+                              </a>
+                          </li>
+                      
+                          <li class="about_partners_iteam">
+                              <a class="link-gray" href="https://megogo.net/ru/podcast_bot">
+                                  Добавить подкаст
+                              </a>
+                          </li>
+                      
+                          <li class="about_partners_iteam">
+                              <a class="link-gray" href="https://megogo.net/ru/partnership">
+                                  Сотрудничество
+                              </a>
+                          </li>
+
+                        <li class="about_partners_iteam" >
+                            <a class="link-gray" href="https://megogo.net/ru/kino_i_tv">
+                                О нас
+                            </a>
+                        </li>
+                    
+                        <li class="about_partners_iteam">
+                            <a class="link-gray" href="https://megogo.net/ru/code">
+                                Контакты для СМИ
+                            </a>
+                        </li>
+                    
+                        <li class="about_partners_iteam">
+                            <a class="link-gray" href="https://megogo.net/ru/rules">
+                                Добавить подкаст
+                            </a>
+                        </li>
+                    
+                        <li class="about_partners_iteam">
+                            <a class="link-gray" href="https://megogo.net/ru/rules#agreement-privacy">
+                                Сотрудничество
+                            </a>
+                        </li>
+                      
+
+                  </ul>
+              
+              </div>
+
+         
+
+
+
+            <div class="users_and_partners">
+                <p class="title"> На устройствах</p>
+
+                <ul class="about_partners">
+                    
+                        <li class="about_partners_iteam" >
+                            <a class="link-gray" href="https://megogo.net/ru/kino_i_tv">
+                                Телевизоры и медиаплееры
+                            </a>
+                        </li>
+                    
+                        <li class="about_partners_iteam">
+                            <a class="link-gray" href="https://megogo.net/ru/code">
+                                Мобильные устройства
+                            </a>
+                        </li>
+                    
+                        <li class="about_partners_iteam">
+                            <a class="link-gray" href="https://megogo.net/ru/rules">
+                                Компьютер
+                            </a>
+                        </li>
+                    
+                        <li class="about_partners_iteam">
+                            <a class="link-gray" href="https://megogo.net/ru/rules#agreement-privacy">
+                                Подключить телевизор
+                            </a>
+                        </li>
+                    
+                        
+                </ul>
+            
+            </div>
+
+
+
+            <div class="users_and_partners">
+                <p class="title">Поддержка пользователей</p>
+
+            <div class="support-email">
+                <a class="link-gray_megog_net" href="mailto:support@megogo.net">support@megogo.net</a>
+            </div>
+          <div class="">
+            <a class="link-gray" href="https://megogo.net/ru/contacts">
+                Все контакты
+            </a>
+            <a class="link-gray" href="https://megogohelp.userecho.com/" target="_blank">
+                Вопросы и ответы
+                </a>
+          </div>
+
+       
+          </div>
+          
+        </div>
+        <div class="links_container">
+          <div class="">
+            <p class="title">Наши приложения</p>
+            <div class="footer_links">
+                <img class="img_link" src="./img/logolink.webp"   /> 
+                <img class="img_link" src="./img/appstore.webp"   /> 
+                <img class="img_link" src="./img/googlelink.webp"   />         
+                <img class="img_link" src="./img/appgalery.webp"   />  
+            </div>
+          </div>
+          <div>
+            <p class="title">Мы в соцсетях</p>
+            <div>
+                <span class="iconify" data-icon="bxl:facebook-circle" style="color: #858383;"></span>
+                <span class="iconify" data-icon="cib:telegram" style="color: #858383;"></span>
+                <span class="iconify" data-icon="jam:viber-circle" style="color: #858383;"></span>
+            </div>
+          </div>
+        </div>
+    </div>
+            <div class="acoridion_channels">
+             <div>
+             <a href="#" class="all_chanels_head"> <ion-icon class="keypad" name="keypad"></ion-icon> <P>ВСЕ КАНАЛЫ</P></a>
+             <div class="accordion_container"></div>
+            </div>
+            <div class="program_list"></div>
+            </div>
+            <div class="program">
+           
+                <ion-icon class="chevron-back-outline"
+                name="chevron-back-outline"></ion-icon>
+              <a href="#" class="program_link"> ПРОГАМИ</a>
+                  
+                
+            </div>
+        </div>    
+     </div>
+
+ 
+
+     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+     <script src="https://hls-js-7b2d34bd-841e-4b02-a50a-7a24e015acb7.netlify.com/dist/hls.js"></script>
+     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+     <script src="./scriptsJs/data.js"></script>
+     <script src="./scriptsJs/navigation.js"></script>
+     <script src="./scriptsJs/right_menu.js"></script>
+     <script src="./scriptsJs/pleyer.js"></script>
+     <script src="./scriptsJs/video_ifnfo.js"></script>
+</body>
+</html>

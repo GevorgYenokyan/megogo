@@ -1,0 +1,141 @@
+/* .player{
+    width: calc(100%);
+    height: calc(100%);
+    transition: 0.5s;
+    z-index: 9000000000;
+    transform: translate(0px,0px);
+}
+
+.player_false{
+    width: 400px;
+    height: 300px;
+   z-index: 900000000;
+    position: fixed;
+    right: 80px;
+    bottom: 10px;
+    transition: 0.4s;
+} */
+
+
+.player{
+    width: calc(100%);
+    height: calc(100%);
+    transition: 0.4s;
+    transform: translate(0px,0px) scale(1);
+    /* z-index: 9000000000; */
+}
+
+.player_false{
+   z-index: 900000000;
+    position: fixed;   
+    transition: 0.4s;
+    transform: translate(400px, 60px) scale(0.26);
+
+}  
+
+
+.video_text{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    
+}
+.player_container{
+    position: relative;
+    width: 100%; 
+    
+}
+.svgicon-svod-tv{
+    width: 20%;
+    fill: #f1f1f1;
+    margin: 0% auto; 
+    padding-top: 50px;
+}
+
+.try_video_btn{
+    width: 240px;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 15px;
+    background-color:rgb(255, 102, 0);
+    color: #f1f1f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.try_video_btn:hover{
+    background-color: rgb(255, 60, 0);
+}
+
+.video_text_link{
+    width: 60%;
+    text-decoration: none;
+    margin: 0% auto;
+    padding-top: 25px;
+    font-size: 20px;
+    color:#f1f1f1 ;
+    text-align: center;
+    letter-spacing: .8px;
+}
+
+.subscriptions-try-and-buy-text{
+    color: #f1f1f1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.subscriptions-discount-label{
+    margin-right: 10px;
+    color: rgb(255, 30, 0);
+    
+}
+
+.about-promo{
+    margin: 0% auto;
+    padding-top: 15px;
+    color: #f1f1f1;
+    font-size: 12px;
+}
+/* 
+.iconify{
+    color: white;
+    cursor: pointer;
+    font-size: 25px;
+    
+} */
+
+.arrow_div{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    padding-top: 70px;
+    margin: 0% auto;
+    color: #e9e9e9;
+}
+
+#next{
+    cursor: pointer;
+}
+#next:hover{
+    color: #f60;
+}
+
+#prev{
+    cursor: pointer;
+}
+
+#prev:hover{
+  color: #f60;
+}
+
+.active_element{
+    color: #f60;
+  
+}
