@@ -50,6 +50,8 @@ dropdown.onmouseover = function () {
 function controlWidth() {
   if (offsetWidth > 1150) {
     all_cont.style.width = `${offsetWidth - 380}px`;
+  } else {
+    all_cont.style.width = `${offsetWidth}px`;
   }
 }
 
