@@ -10,13 +10,13 @@ var player = document.querySelector(".player");
 accordion_container.innerHTML = data_accordion.map((el, i) => {
   return `<a class = "channel_head" href = "#"> <ion-icon class="channel_head_arrow"
   name="chevron-back-outline"></ion-icon> ${el.name}</a>
-           <ul class ="accordion_ul">
+           <ul class ="accordion_ul" >
            ${data_accordion[i].content.map(
              (i,
              (el) => {
                return `
-                <li class = "accordion_list">  
-               <img class ="accordion_img" src = '${el.img}' alt = "img"/> <p>${el.channel}</P>  
+                <li class = "accordion_list"  onclick="render_program_guid()">  
+               <img class ="accordion_img" src = '${el.img}' alt = "img"/> <p class = "">${el.channel}</P>  
                </li>
                `;
              })
@@ -25,6 +25,8 @@ accordion_container.innerHTML = data_accordion.map((el, i) => {
   
   `;
 });
+
+var chanells = document.querySelectorAll(".accordion_list");
 
 for (let i = 0; i < acordion.length; i++) {
   acordion[i].addEventListener("click", function () {
@@ -76,24 +78,65 @@ function change_bull() {
   }
 }
 
-dataProgramList.map((el, i) => {
-  return (program_list.innerHTML =
-    program_list.innerHTML +
-    ` <div class = "program_list_cont"   onclick="change_bull();">
-      <div class = "program_list_head">
-        <h1 class = "program_list_day">${el.day}</h1>
-         <h3>${el.month}</h3>
-      </div>
-        <ul class ="program_list_ul">
-         <li class = "program_list_iteam">${el.list_1}</li>
-         <li class = "program_list_iteam">${el.list_2}</li>
-         <li class = "program_list_iteam">${el.list_3}</li>
-         <li class = "program_list_iteam">${el.list_4}</li>
-         <li class = "program_list_iteam">${el.list_5}</li>
-        </ul>
-    </div>
-         `);
-});
+var data = [];
+create_data();
+
+function create_data() {
+  for (var i = -5; i <= 10; i++) {
+    var date = new Date();
+
+    var obj = {
+      id: Date.now(),
+      start: date.setHours(date.getHours() + i * 2),
+      end: date.setHours(date.getHours() + (i + 0.25) * 2),
+      title: "Electrionic program guid " + (i + 11),
+    };
+
+    data.push(obj);
+  }
+}
+
+var dayOfWeekNamesLow = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+render_program_guid();
+
+function render_program_guid() {
+  for (var i = 0; i < 10; i++) {
+    var div = document.createElement("div");
+    div.classList.add("program_list_cont");
+    var program_list_head = document.createElement("div");
+    program_list_head.classList.add("program_list_head");
+    var program_list_day = document.createElement("h1");
+    program_list_day.classList.add("program_list_day");
+    var h3 = document.createElement("h3");
+    var program_list_ul = document.createElement("ul");
+    program_list_ul.classList.add("program_list_ul");
+    for (var j = 0; j < data.length; j++) {
+      var program_list_iteam = document.createElement("li");
+      program_list_iteam.classList.add("program_list_iteam");
+      var time = document.createElement("span");
+      console.log(data[j].start);
+      time.innerHTML = formatDate(new Date(data[j].start), " HH:mm");
+      time.classList.add("list_iteam_time");
+      var span = document.createElement("span");
+      span.innerHTML = data[j].title;
+      program_list_iteam.appendChild(time);
+      program_list_iteam.appendChild(span);
+      program_list_ul.appendChild(program_list_iteam);
+    }
+    var date = new Date();
+    date = date.setDate(date.getDate() + i);
+    date = new Date(date);
+    program_list_day.innerHTML = dayOfWeekNamesLow[date.getDay()];
+    h3.innerHTML = date.getDate();
+    program_list_head.appendChild(program_list_day);
+    program_list_head.appendChild(h3);
+    div.appendChild(program_list_head);
+    div.appendChild(program_list_ul);
+    program_list.appendChild(div);
+  }
+  console.log(1);
+}
 
 var video_text = document.querySelector(".video_text");
 

@@ -349,6 +349,8 @@ ion-icon {
 
                 }
 
+                
+
                 #show_drop{
                     display: none;
                 }
@@ -361,19 +363,106 @@ ion-icon {
         display: flex;
         flex-direction: column;
     }
+   
+
 
 
     .all_cont{
         width: 100%;
     }
-
+     
     .nav_list{
+        display: flex;
+        align-items: center;
+    }
+    .navigation{
+        position: fixed;
+        z-index: 10000000;
+        height: 100%;
+        width: 100%;
+        max-width: 700px;
+        min-width: 320px;
+        display: flex;
+       flex-direction: column-reverse;
+       align-items: center;
+       justify-content: flex-end;
+       background-color: #f1f1f1;
+    }
+    .nav_iteam{
         display: none;
+        width: 100%;
     }
 
     .search{
         display: none;
     }
-                      
+    .nav_logo{
+        display: none;
+    }
+
+    .list_menu{
+        width: 100%;
+    }
+
+        .search_block_div{
+            flex-direction: column;
+            height: auto;
+            width: 100%;
+           
+        }  
+        
+    .search_block_iteam_try{
+    width: 100%;
+    min-width: 320px;
+    height: 54px;
+    line-height: 42px;
+    border: none;
+    border-radius: 0;
+    background: #23c3b2;
+    font-weight: 600;
+    font-size: 11px;
+    text-align: center;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 10px auto;
+    position: relative;
+        }
+ 
+        .search_block{
+            width: 100%;
+        }
+
+
+        .dropdown-content{
+            display: flex;
+            flex-direction: column;
+            box-shadow: none;
+            
+        }
+
+    
+
+         .dropdown{           
+             width: 100%;
+             display: flex;
+             justify-content: flex-end;
+             
+         }
+
+.search_block_iteam{
+    color: #1a1a1a;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+        .dropbtn{
+            display: none;
+
+        }
  }
 

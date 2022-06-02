@@ -112,7 +112,6 @@
   
   ::-webkit-scrollbar-thumb:hover {
     width: 10px;
-    
     }
     
 
@@ -164,6 +163,10 @@
 
 .program_list_day{
     font-size: 60px;
+}
+
+.list_iteam_time{
+    margin-right: 10px;
 }
 
 .program_list_iteam:hover{
