@@ -108,3 +108,14 @@
 #iconify_twitter{
     font-size: 15px;
 }
+
+
+
+@media(max-width:1150px){
+    .iconify_info_facebook{
+        display: none;
+    }
+    .iconify_info_twitter{
+        display: none;
+    }
+    }

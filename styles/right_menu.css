@@ -14,7 +14,7 @@
     cursor: pointer;
 }
 
-
+                   
 .program:hover  .program_link{
   color: #f60;
 }
@@ -251,17 +251,27 @@
 
     .accordion_container{
         width: 100%;
-        height: 300px;
+        height: 400px;
         overflow-y: auto;
+        display: none;
         
         
     }
     .program_list{
         position: relative;
         overflow-y: auto;
-        height: 300px;
+        height: 500px;
+        width: 100%;
+    }
+    .program_list_cont{
+        width: 100%;
+        flex-direction: column;
     }
 
+    .program_list_iteam{
+        margin: 10px auto;
+        font-size: 18px;
+    }
     .all_chanels_head{
         display: none;
     }
