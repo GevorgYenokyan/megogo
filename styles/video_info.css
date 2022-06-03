@@ -109,13 +109,75 @@
     font-size: 15px;
 }
 
+.show_channels_div{
 
+}
 
 @media(max-width:1150px){
+    .acordon_video{
+        background-color: aliceblue;
+        
+    }
+
+   .title_head{
+       color: #313636;
+       margin-left: 15px;
+   }
+
+   .video_info_content{
+       justify-content: flex-start;
+       align-items: center;
+   }
+
     .iconify_info_facebook{
         display: none;
     }
     .iconify_info_twitter{
         display: none;
     }
+
+    .show_channels_div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+        background-color: aliceblue;
+        padding: 15px;
+    }
+
+    .btn_info_cont{
+        display: flex;
+
+    }
+
+    .btn_info{
+        background: none;
+        border: none;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: .4px;
+        color: var(--color-contrast-low);
+        margin-right: 30px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    .Nav_all__channels__LW2Nc{
+
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1.3px;
+        color: #1b1b1b;
+        text-transform: uppercase;
+        padding: 9px;
+        border-radius: 5px;
+        box-shadow: 0 2px 2px 0 rgb(0 0 0 / 5%), 0 0 1px 0 rgb(0 0 0 / 14%);
+        margin-left: auto;
+        text-align: center;
+        text-decoration: none;
+    }
+
     }

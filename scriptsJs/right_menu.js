@@ -7,10 +7,12 @@ var list = document.getElementsByClassName("accordion_ul");
 var channel_head_arrow = document.getElementsByClassName("channel_head_arrow");
 var player = document.querySelector(".player");
 
-accordion_container.innerHTML = data_accordion.map((el, i) => {
-  return `<a class = "channel_head" href = "#"> <ion-icon class="channel_head_arrow"
+data_accordion.map((el, i) => {
+  return (accordion_container.innerHTML =
+    accordion_container.innerHTML +
+    `<a class = "channel_head" href = "#"> <ion-icon class="channel_head_arrow"
   name="chevron-back-outline"></ion-icon> ${el.name}</a>
-           <ul class ="accordion_ul" >
+           <ul class ="accordion_ul" > 
            ${data_accordion[i].content.map(
              (i,
              (el) => {
@@ -23,7 +25,7 @@ accordion_container.innerHTML = data_accordion.map((el, i) => {
            )}
            </ul>   
   
-  `;
+  `);
 });
 
 var chanells = document.querySelectorAll(".accordion_list");
@@ -82,7 +84,7 @@ var data = [];
 create_data();
 
 function create_data() {
-  for (var i = -5; i <= 10; i++) {
+  for (var i = -3; i <= 10; i++) {
     var date = new Date();
 
     var obj = {

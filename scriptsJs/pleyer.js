@@ -6,6 +6,14 @@ var accordion_list = document.querySelectorAll(".accordion_list");
 
 var accordion_index = 0;
 
+var program_list = document.querySelector(".program_list");
+
+var accordion_container = document.querySelector(".accordion_container");
+
+var chanels_btn = document.querySelector(".btn_info");
+
+var program_btn = document.querySelector("#btn_info_id");
+
 function play_video() {
   if (Hls.isSupported()) {
     var video = document.getElementById("video");
@@ -58,3 +66,13 @@ function prev() {
 
 next_btn.addEventListener("click", next);
 prev_btn.addEventListener("click", prev);
+
+program_btn.addEventListener("click", function () {
+  program_list.style.display = "flex";
+  accordion_container.style.display = "none";
+});
+
+chanels_btn.addEventListener("click", function () {
+  program_list.style.display = "none";
+  accordion_container.style.display = "flex";
+});

@@ -239,7 +239,8 @@
 
 @media(max-width:1150px){
    .program{
-       display: none;
+       
+      display: none; 
        
    }
     .acoridion_channels{
@@ -247,26 +248,62 @@
         width: 100%;
         height: 100%;
         overflow-y: auto;
+        background-color: #f1f1f1;
+        transform: translateX(0px);
     }
 
     .accordion_container{
-        width: 100%;
         height: 400px;
         overflow-y: auto;
-        display: none;
-        
-        
+        width: 100%;
+                   
     }
+
+   .channel_head_arrow{
+       display: none;
+   }
+
+    .accordion_ul{
+        width: 100%;
+        display: block;
+    }
+
+   .channel_head{
+       color: #313636;
+   }
+
+  .accordion_list{
+      color: #313636;
+      justify-content: space-between;
+  }
+
+
+  .accordion_container::-webkit-scrollbar {
+    width: 0px;
+    background-color: #000000;
+    
+  }
+
     .program_list{
         position: relative;
         overflow-y: auto;
         height: 500px;
         width: 100%;
+        right: 0px;
+        display: none;
     }
     .program_list_cont{
         width: 100%;
         flex-direction: column;
     }
+
+   .program_list_head{
+       flex-direction: row-reverse;
+       align-items: center;
+       position: relative;
+       justify-content: flex-end;
+       color: #313636;
+   }
 
     .program_list_iteam{
         margin: 10px auto;
@@ -275,4 +312,6 @@
     .all_chanels_head{
         display: none;
     }
+
+
     }

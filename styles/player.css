@@ -29,7 +29,7 @@
    z-index: 900000000;
     position: fixed;   
     transition: 0.4s;
-    transform: translate(700px, 200px) scale(0.5);
+    transform: translate(400px, 60px) scale(0.25);
 
 }  
 
