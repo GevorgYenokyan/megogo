@@ -122,6 +122,13 @@ body{
     font-size: 15px;
 }
 
+.drobdaown_line{
+    width: 90%;
+    margin: 0% auto;
+    height: 1px;
+    background-color: rgba(63, 60, 60,0.5);
+}
+
 .dropbtn_language{
     color: #a59f9f;
     background-color: #1a1a1a;
@@ -146,6 +153,15 @@ body{
 
 .search_block_iteam:hover{
     color: #f60;
+}
+
+
+#main_drop{
+    display: none;
+}
+
+#search_drop{
+    display: none;
 }
 
 
@@ -366,6 +382,7 @@ ion-icon {
      .all_cont{
          position: relative;
          overflow-y: auto;
+         width: 100%;
      }
     .nav_list{
         display: flex;
@@ -374,7 +391,7 @@ ion-icon {
 
     }
     .navigation{
-        position: absolute;
+        position: fixed;
         display: none;
         z-index: 10000000;
         height: 100%;
@@ -439,11 +456,21 @@ ion-icon {
             width: 100%;
         }    
 
+
+
+        .dropdown-content a{
+            margin-bottom: 15px;
+        }    
+
          .dropdown{           
              width: 100%;
              display: flex;
              justify-content: flex-end;
              
+         }
+
+         .drobdaown_line{
+             display: none;
          }
 
 .search_block_iteam{
@@ -465,5 +492,44 @@ ion-icon {
             background: transparent;
             color: #1a1a1a;
         }
+
+        
+
+    .nav_footer{
+        width: 100%;
+        height: 600+px;
+        background-color: #1a1a1a;
+    }
+
+
+
+        #film_drop{
+           font-size: 20px;
+        }
+
+        #mult_drop{
+            font-size: 20px;
+         }
+
+         #serial_drop{
+            font-size: 20px;
+         }
+
+         #show_drop{
+            font-size: 20px;
+         }
+
+         #bloger_drop{
+            font-size: 20px;
+         }
+
+         #main_drop{
+             display: block;
+             font-size: 20px;
+         }
+         #search_drop{
+            display: block;
+             font-size: 20px; 
+         }
  }
 

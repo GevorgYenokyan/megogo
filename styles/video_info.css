@@ -48,6 +48,10 @@
     width: 50px;
 }
 
+.show_channels_div{
+    display: none;
+}
+
 .info_links{
     margin-right: 20px;
 }
@@ -164,6 +168,8 @@
         align-items: center;
     }
   
+  
+
     .Nav_all__channels__LW2Nc{
 
         display: inline-block;

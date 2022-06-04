@@ -7,12 +7,10 @@ var list = document.getElementsByClassName("accordion_ul");
 var channel_head_arrow = document.getElementsByClassName("channel_head_arrow");
 var player = document.querySelector(".player");
 
-data_accordion.map((el, i) => {
-  return (accordion_container.innerHTML =
-    accordion_container.innerHTML +
-    `<a class = "channel_head" href = "#"> <ion-icon class="channel_head_arrow"
+accordion_container.innerHTML = data_accordion.map((el, i) => {
+  return `<a class = "channel_head" href = "#"> <ion-icon class="channel_head_arrow"
   name="chevron-back-outline"></ion-icon> ${el.name}</a>
-           <ul class ="accordion_ul" > 
+           <ul class ="accordion_ul" >
            ${data_accordion[i].content.map(
              (i,
              (el) => {
@@ -25,10 +23,18 @@ data_accordion.map((el, i) => {
            )}
            </ul>   
   
-  `);
+  `;
 });
 
 var chanells = document.querySelectorAll(".accordion_list");
+
+for (let i = 0; i < chanells.length; i++) {
+  chanells[i].addEventListener("click", function () {
+    play_video(data_channel_api[i]);
+    accordion_index = i;
+    showActive_element();
+  });
+}
 
 for (let i = 0; i < acordion.length; i++) {
   acordion[i].addEventListener("click", function () {
@@ -43,7 +49,7 @@ for (let i = 0; i < acordion.length; i++) {
 }
 
 let size_bull = false;
-var accordion_container = document.querySelector(".acoridion_channels");
+var accordion_channels = document.querySelector(".acoridion_channels");
 
 var program = document.querySelector(".program");
 
@@ -58,9 +64,9 @@ program.addEventListener("click", function () {
 
 function accordion_size() {
   if (!size_bull) {
-    accordion_container.style.transform = `translateX(${offsetWidth - 380}px)`;
+    accordion_channels.style.transform = `translateX(${offsetWidth - 380}px)`;
   } else {
-    accordion_container.style.transform = `translateX(0px)`;
+    accordion_channels.style.transform = `translateX(0px)`;
   }
 }
 
@@ -84,7 +90,7 @@ var data = [];
 create_data();
 
 function create_data() {
-  for (var i = -3; i <= 10; i++) {
+  for (var i = -5; i <= 10; i++) {
     var date = new Date();
 
     var obj = {
@@ -116,6 +122,7 @@ function render_program_guid() {
     for (var j = 0; j < data.length; j++) {
       var program_list_iteam = document.createElement("li");
       program_list_iteam.classList.add("program_list_iteam");
+      program_list_iteam.addEventListener("click", change_bull);
       var time = document.createElement("span");
       console.log(data[j].start);
       time.innerHTML = formatDate(new Date(data[j].start), " HH:mm");

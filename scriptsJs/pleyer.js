@@ -14,11 +14,11 @@ var chanels_btn = document.querySelector(".btn_info");
 
 var program_btn = document.querySelector("#btn_info_id");
 
-function play_video() {
+function play_video(chanell_index) {
   if (Hls.isSupported()) {
     var video = document.getElementById("video");
     var hls = new Hls();
-    quelle = data_accordion[accordion_index].content[accordion_index].src;
+    quelle = chanell_index;
     //quelle = 'http://linux-app.tv:6204/live/21164920/31520888/23808.m3u8';
     hls.loadSource(quelle);
 
@@ -34,7 +34,7 @@ function play_video() {
   }
 }
 
-play_video();
+play_video(data_channel_api[accordion_index]);
 
 function showActive_element() {
   var accordion_list = document.querySelectorAll(".accordion_list");
@@ -53,7 +53,7 @@ function next() {
     accordion_index++;
   }
   showActive_element();
-  play_video();
+  play_video(data_channel_api[accordion_index]);
 }
 
 function prev() {
@@ -61,7 +61,7 @@ function prev() {
     accordion_index--;
   }
   showActive_element();
-  play_video();
+  play_video(data_channel_api[accordion_index]);
 }
 
 next_btn.addEventListener("click", next);

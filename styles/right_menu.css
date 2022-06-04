@@ -45,10 +45,6 @@
     color: #f1f1f1;
 } 
 
-/* .program_link:hover{
- color: #f60;
- cursor: pointer;
-} */
 
 
 .acoridion_channels{
@@ -194,6 +190,8 @@
     background-color: #000000;
   }
 
+
+
 .channel_head{
     color: #f1f1f1;
     font-size: 17px;
@@ -303,6 +301,7 @@
        position: relative;
        justify-content: flex-end;
        color: #313636;
+       
    }
 
     .program_list_iteam{
